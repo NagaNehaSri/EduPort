@@ -1,0 +1,980 @@
+/* css/style.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+:root {
+    --primary-green: #1ABC9C; /* A vibrant green */
+    --dark-green: #16A085;    /* A darker shade */
+    --light-gray: #f8f9fa;
+    --dark-text: #343a40;
+    --light-text: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+     font-weight: 600;
+}
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    color: var(--primary-green) !important;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.navbar-brand .logo-icon { /* Simple placeholder logo styling */
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-green);
+    border-radius: 5px;
+    margin-right: 5px;
+    vertical-align: middle;
+    /* Add a simple visual element - replace with actual logo */
+    border: 2px solid var(--dark-green);
+}
+
+
+.nav-link {
+    color: var(--dark-text) !important;
+    margin: 0 0.5rem;
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-green) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn-outline-primary {
+     border-color: var(--primary-green);
+     color: var(--primary-green);
+     padding: 0.6rem 1.5rem;
+     font-weight: 500;
+     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-green);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--dark-green); /* Dark green background */
+    /* Optional: Add a subtle background image */
+    /* background-image: linear-gradient(rgba(22, 160, 133, 0.8), rgba(22, 160, 133, 0.9)), url('...'); */
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    padding: 8rem 0 6rem 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.hero-section .btn {
+    margin-right: 1rem;
+    margin-bottom: 1rem; /* For mobile */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Partners Section */
+.partners-section {
+    background-color: var(--light-gray);
+    padding: 2rem 0;
+}
+
+.partners-section img {
+    max-height: 40px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    margin: 0 1rem;
+}
+
+.partners-section img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Topics Section */
+.topics-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.topic-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem; /* Space between cards */
+    height: 100%; /* Make cards in a row equal height */
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.topic-card .icon {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    /* Use FontAwesome or Bootstrap Icons here */
+}
+
+.topic-card h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.topic-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+
+/* Benefits Section */
+.benefits-section {
+    padding: 4rem 0;
+     background-color: var(--light-gray);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    padding: 3rem 0 1rem 0;
+}
+
+footer a {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-green);
+}
+
+footer .footer-brand {
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+footer .footer-brand .logo-icon {
+     display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-green);
+    border-radius: 5px;
+    margin-right: 5px;
+    vertical-align: middle;
+    border: 2px solid var(--light-gray);
+}
+
+footer h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer .social-icons a {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: var(--primary-green);
+}
+
+footer .copyright {
+    border-top: 1px solid #495057;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #adb5bd;
+}
+
+/* Page Headers */
+.page-header {
+    background-color: var(--dark-green);
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.page-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* About Page Specific */
+.about-section img {
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.team-member {
+    text-align: center;
+}
+.team-member img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.value-item .icon {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+/* Chapters/Courses Page */
+.course-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.course-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image nicely */
+}
+
+.course-card .card-body {
+    padding: 1rem;
+    flex-grow: 1; /* Allow body to grow */
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    flex-grow: 1; /* Push footer down */
+}
+
+.course-card .card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+.course-card .instructor-info {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+.course-card .price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-top: auto; /* Push price to bottom */
+}
+
+.course-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-green);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+
+/* Chapter View Page */
+.course-details img.main-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.course-sidebar {
+    background-color: var(--light-gray);
+    
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem; 
+    
+    
+}
+.course-sidebar h5 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+.course-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+.course-sidebar ul li {
+    margin-bottom: 0.7rem;
+    font-size: 0.95rem;
+}
+.course-sidebar ul li strong {
+    display: inline-block;
+    min-width: 80px; /* Align values */
+    color: var(--dark-text);
+}
+.course-sidebar .contact-info p {
+     margin-bottom: 0.5rem;
+     font-size: 0.95rem;
+}
+.course-sidebar .contact-info i {
+    margin-right: 8px;
+    color: var(--primary-green);
+    width: 15px; /* Align icons */
+    text-align: center;
+}
+
+.what-you-learn ul, .why-choose ul {
+    list-style: none;
+    padding-left: 0;
+}
+.what-you-learn li, .why-choose li {
+    margin-bottom: 0.7rem;
+    position: relative;
+    padding-left: 25px; /* Space for icon */
+}
+.what-you-learn li::before, .why-choose li::before {
+    content: '\f00c'; /* FontAwesome check icon */
+    font-family: 'Font Awesome 5 Free'; /* Ensure FontAwesome is linked */
+    font-weight: 900;
+    color: var(--primary-green);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* Quiz Page */
+.quiz-container {
+    background-color: var(--light-gray);
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto 4rem auto; /* Center and add margin */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative; /* For potential speech bubble effect */
+}
+
+/* Optional: Speech bubble effect (like example) */
+.quiz-container::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Position below the box */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--light-gray); /* Match background */
+    /* filter: drop-shadow(0 8px 5px rgba(0,0,0,0.05)); */ /* Subtle shadow */
+}
+
+
+.quiz-container h2 {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.quiz-container .question {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.quiz-options .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: var(--dark-text);
+    padding: 0.8rem 1.5rem;
+}
+
+.quiz-option.active{
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: #fff;
+}
+.quiz-options .btn:hover, .quiz-options .btn.selected {
+     background-color: var(--primary-green);
+     border-color: var(--primary-green);
+     color: #fff;
+}
+.quiz-options .btn .option-letter {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.1);
+    color: var(--dark-text);
+    margin-right: 10px;
+    font-weight: 600;
+}
+.quiz-options .btn:hover .option-letter,
+.quiz-options .btn.selected .option-letter {
+    background-color: #fff;
+    color: var(--primary-green);
+}
+
+.quiz-navigation {
+    margin-top: 2rem;
+}
+
+/* Login/Signup Page */
+.auth-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    background-color: var(--light-gray); /* Light background for contrast */
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    position: relative; /* For illustrations if needed */
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark-text);
+}
+.auth-container .form-control {
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+}
+.auth-container .form-check-label {
+     font-size: 0.9rem;
+}
+.auth-container .forgot-password {
+    font-size: 0.9rem;
+    display: block;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+.auth-container .btn-submit {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.auth-container .divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+    position: relative;
+}
+.auth-container .divider::before,
+.auth-container .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ddd;
+}
+.auth-container .divider::before { left: 0; }
+.auth-container .divider::after { right: 0; }
+
+.auth-container .social-login .btn {
+    width: 100%;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem;
+    font-size: 0.95rem;
+}
+.auth-container .social-login .btn i {
+    margin-right: 8px;
+}
+.auth-container .toggle-auth {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+.auth-container .toggle-auth a {
+    color: var(--primary-green);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+/* .quiz-option.active{
+    background: red !important;
+}
+
+.quiz-option.active{
+    background: red !important;
+} */
+.auth-container .toggle-auth a:hover {
+    text-decoration: underline;
+}
+
+/* Hide Signup form initially if toggling */
+#signup-form {
+    display: none; /* Initially hide signup */
+}
+
+/* Contact Page */
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.contact-info .info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-right: 1rem;
+    width: 30px; /* Align icons */
+    text-align: center;
+}
+.contact-info .info-item span {
+    font-size: 1rem;
+}
+
+.contact-form .form-control {
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+}
+.contact-form textarea.form-control {
+    min-height: 150px;
+}
+
+.map-container {
+     margin-top: 3rem;
+     border-radius: 8px;
+     overflow: hidden; /* Ensures map fits rounded corners */
+}
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .hero-section {
+        text-align: center;
+        padding: 5rem 0 4rem 0;
+    }
+    .hero-image {
+        margin-top: 2rem;
+        text-align: center;
+    }
+     .hero-image img {
+        max-width: 80%;
+    }
+    .footer .text-end {
+        text-align: start !important; /* Align footer columns left on medium */
+        margin-top: 1.5rem;
+     }
+}
+
+@media (max-width: 767.98px) {
+     .hero-section h1 {
+        font-size: 2.5rem;
+     }
+    .partners-section img {
+        margin: 0.5rem; /* Add vertical spacing on mobile */
+        max-height: 30px;
+    }
+    .page-header {
+        padding: 3rem 0;
+    }
+     .page-header h1 {
+        font-size: 2rem;
+    }
+    .course-sidebar {
+        margin-top: 2rem; /* Add space above sidebar when it stacks */
+    }
+     .auth-container {
+        padding: 2rem 1.5rem;
+     }
+}
+
+.quiz-results-container {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    max-width: 700px;
+    margin: 4rem auto; /* Center and add margin */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 4rem;
+    color: #ffffff; /* White icon */
+    background-color: var(--primary-green); /* Green circle background */
+    width: 80px;
+    height: 80px;
+    line-height: 80px; /* Vertically center icon */
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    display: block; /* Center the block element */
+}
+
+ /* Style for failed state */
+.result-icon.failed {
+     background-color: #e74c3c; /* Red background for failure */
+}
+ .quiz-results-container h2 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+ }
+ .quiz-results-container .result-message {
+     font-size: 1.1rem;
+     color: #6c757d;
+     margin-bottom: 2.5rem;
+ }
+
+.score-box {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.score-box .score-title {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.score-box .score-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    line-height: 1.1;
+}
+ .score-box .passing-info {
+     font-size: 0.8rem;
+     color: #adb5bd;
+     margin-top: 1rem;
+     border-top: 1px solid #ddd;
+     padding-top: 0.5rem;
+ }
+
+.review-button {
+     margin-top: 2rem;
+}
+        /* Basic Page Header Style */
+        .page-header {
+            background-color: var(--primary-green); /* Use your theme color */
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem; /* Space below header */
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .page-header p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Styles for the Review Container and Questions */
+        .quiz-review-container {
+            background-color: #f8f9fa; /* Light background */
+            border: 1px solid #dee2e6;
+            border-radius: 8px; /* Optional rounding */
+            color: var(--dark-text);
+        }
+        .quiz-review-question {
+            background-color: #fff; /* White background for each question block */
+            border: 1px solid #eee;
+            position: relative;
+            border-radius: 5px; /* Optional rounding for question blocks */
+        }
+        .question-text {
+            color: var(--dark-text);
+        }
+        .review-option {
+            padding: 0.6rem 1rem; /* Slightly more padding */
+            margin-bottom: 0.5rem;
+            border: 1px solid #e9ecef; /* Default border */
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            color: #495057;
+            background-color: #fff;
+            transition: background-color 0.3s ease; /* Keep transition */
+        }
+        .review-option .feedback-icon {
+             /* We keep the span for structure, but it won't show icons without JS */
+             margin-right: 0.75rem;
+             min-width: 20px;
+             text-align: center;
+             display: inline-block; /* Ensure it takes space */
+             color: transparent; /* Hide potential leftover icon text */
+        }
+
+        /* Styles for static indication (if you wanted to hardcode feedback) */
+        /* THESE WILL NOT BE APPLIED AUTOMATICALLY WITHOUT JS */
+        .review-option.correct-answer-static {
+            border-color: var(--primary-green) !important;
+            background-color: #e8f5e9 !important;
+            color: #155724 !important;
+        }
+        .review-option.user-selected-static {
+            border-color: #6c757d !important;
+            font-weight: 500 !important;
+        }
+        .review-option.incorrect-selection-static {
+            border-color: #dc3545 !important;
+            background-color: #fdeeee !important;
+            color: #721c24 !important;
+            text-decoration: line-through;
+        }
+
+        /* Basic Button Style */
+        .back-button-container {
+            margin-top: 2rem;
+        }
+
+         /* Basic Navbar Styles (Minimal for display without JS collapse) */
+        .navbar { background-color: #fff; border-bottom: 1px solid #eee; padding-top: 1rem; padding-bottom: 1rem;}
+        .navbar-brand { color: var(--primary-green) !important; font-weight: 700; font-size: 1.8rem; }
+        .navbar-brand .logo-icon { display: inline-block; width: 30px; height: 30px; background-color: var(--primary-green); border-radius: 5px; margin-right: 5px; vertical-align: middle; border: 2px solid var(--dark-green); }
+        .nav-link { color: var(--dark-text) !important; margin: 0 0.5rem; font-weight: 500; }
+        .nav-link:hover, .nav-link.active { color: var(--primary-green) !important; }
+        .navbar-nav { flex-direction: row; /* Basic horizontal layout for desktop */ }
+        @media (max-width: 991.98px) { .navbar-nav { flex-direction: column; } /* Stack on smaller screens */ }
+
+        /* Basic Footer Styles */
+        footer { background-color: var(--dark-text); color: var(--light-text); padding: 3rem 0 1rem 0; }
+        footer a { color: var(--light-text); text-decoration: none; } footer a:hover { color: var(--primary-green); }
+        footer .footer-brand { color: var(--primary-green); font-weight: 700; font-size: 1.8rem; margin-bottom: 1rem; display: block; }
+        footer .footer-brand .logo-icon { display: inline-block; width: 30px; height: 30px; background-color: var(--primary-green); border-radius: 5px; margin-right: 5px; vertical-align: middle; border: 2px solid var(--light-gray);}
+        footer h5 { color: #fff; margin-bottom: 1rem; font-weight: 600; } footer ul { list-style: none; padding-left: 0; } footer ul li { margin-bottom: 0.5rem; }
+        footer .social-icons a { color: var(--light-text); font-size: 1.2rem; margin-right: 1rem; } footer .social-icons a:hover { color: var(--primary-green); }
+        footer .copyright { border-top: 1px solid #495057; margin-top: 2rem; padding-top: 1rem; font-size: 0.9rem; text-align: center; color: #adb5bd; }
+
+        /* Ensure main content area has space */
+        main.container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    /* logo */
+        .sticky-logo {
+            max-width: 150px; 
+            height: auto; 
+        }
+
+        /* logout  */
+        /* Base styles for the side panel */
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    width: 100%; /* Full width on mobile */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out; /* Smooth sliding animation */
+    z-index: 1000;
+}
+
+.side-panel.open {
+    right: 0; /* Slide into view */
+}
+
+.side-panel-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.dropdown-header p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.dropdown-header small {
+    font-size: 12px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-divider {
+    margin: 10px 0;
+}
+
+/* Styles for Desktop */
+@media (min-width: 769px) {
+    .side-panel {
+        width: 300px; /* Fixed width on desktop */
+    }
+}
+
+/* loading  */
+/* General Styles */
+.question {
+    font-size: 2rem; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+}
+
+.loading-dots {
+    display: inline-block;
+    margin-left: 10px; /* Adjust spacing between text and dots */
+}
+
+.loading-dots span {
+    display: inline-block;
+    font-size: 2rem; /* Match the size of the text */
+    color: #333;
+    animation: bounce 0.6s infinite alternate;
+}
+
+/* Animate Each Dot with a Delay */
+.loading-dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px); /* Slightly larger bounce */
+    }
+}

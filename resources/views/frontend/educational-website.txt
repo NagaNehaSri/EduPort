@@ -1,0 +1,12 @@
+educational-website/
+├── index.html             # Home Page
+├── about.html             # About Page
+├── chapters.html          # Chapters/Courses List Page
+├── chapter-view.html      # Single Chapter/Course View Page
+├── quiz.html              # Quiz Page
+├── login-signup.html      # Login & Signup Page
+├── contact.html           # Contact Page
+├── css/
+│   └── style.css          # Custom Styles
+└── js/
+    └── script.js          # Custom JavaScript (optional interactivity)

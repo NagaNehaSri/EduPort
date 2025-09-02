@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f5e9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px; 
+}
+
+
+.signup-container {
+    background-color: #ffffff;
+
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); 
+    width: 100%;
+
+    max-width: 550px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #2e7d32; 
+    margin-bottom: 30px; 
+    font-size: 2em; 
+}
+
+.form-group {
+    margin-bottom: 22px; 
+    position: relative;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #a5d6a7; /* Light green border */
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #4caf50; /* Medium Green on focus */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.25); /* Slightly stronger focus ring */
+}
+
+/* Password Toggle Icon */
+.password-group {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    /* Vertically center relative to the input field height */
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* Removed transform as direct centering works better with height: 100% */
+    cursor: pointer;
+    color: #888;
+    z-index: 2;
+     /* Adjust positioning slightly if label is present */
+    margin-top: 28px; /* Approximate height of the label + margin */
+}
+/* Adjust toggle position if there's no label or label position changes */
+label + .toggle-password {
+     margin-top: 0; /* Reset if directly after input (less common setup) */
+     top: 50%;
+     transform: translateY(-50%);
+     height: auto; /* Reset height if using transform */
+}
+/* More robust way to position relative to input: position inside input's parent */
+.form-group input[type="password"] + .toggle-password {
+     top: auto; /* Let bottom/height control */
+     bottom: 0;
+     height: 45px; /* Approx height of input + padding */
+     margin-top: 0;
+     transform: none;
+}
+
+
+.toggle-password i {
+    font-size: 1.1em;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px 15px; /* Slightly larger button */
+    background-color: #4caf50; /* Medium Green */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #388e3c; /* Darker Green on hover */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #d32f2f;
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+    border-radius: 5px;
+    padding: 12px; /* Slightly more padding */
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    text-align: center;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Login Link */
+.login-link {
+    text-align: center;
+    margin-top: 25px; /* More space */
+    font-size: 0.95em; /* Slightly larger */
+    color: #555;
+}
+
+.login-link a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design Adjustments (Primarily for smaller screens) */
+@media (max-width: 600px) {
+     /* Reduce body padding on smaller screens */
+    body {
+         padding: 20px 15px;
+    }
+    .signup-container {
+        /* Reduce padding inside container */
+        padding: 30px 25px;
+    }
+    h1 {
+        font-size: 1.7em; /* Adjust heading size */
+        margin-bottom: 25px;
+    }
+    .form-group {
+        margin-bottom: 18px;
+    }
+     button[type="submit"] {
+         padding: 12px 15px;
+     }
+     .login-link {
+         margin-top: 20px;
+     }
+      /* Adjust toggle password position slightly if needed for smaller inputs */
+     .form-group input[type="password"] + .toggle-password {
+          height: 42px; /* Adjust if input padding changes */
+     }
+}
+
+ @media (max-width: 400px) {
+     h1 {
+         font-size: 1.5em;
+     }
+      .signup-container {
+        padding: 25px 20px;
+    }
+     label {
+         font-size: 0.9em;
+     }
+     input[type="text"],
+     input[type="email"],
+     input[type="password"] {
+         padding: 10px 12px;
+         font-size: 0.95em;
+     }
+      .form-group input[type="password"] + .toggle-password {
+          height: 40px; /* Adjust if input padding changes */
+     }
+ }
